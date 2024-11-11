@@ -1,6 +1,9 @@
 package tn.esprit.entities;
 
-public abstract non-sealed class Aquatic extends Animal {
+import tn.esprit.enums.Food;
+import tn.esprit.interfaces.Carnivore;
+
+public non-sealed class Aquatic extends Animal implements Carnivore<Food> {
 
     protected String habitat;
 
@@ -12,8 +15,10 @@ public abstract non-sealed class Aquatic extends Animal {
         this.habitat = habitat;
     }
 
-
-    public abstract void swim();
+    @Override
+    public void eatMeat(Food meat) {
+        System.out.println("This aquatic eat "+meat+".");
+    }
 
     @Override
     public String toString() {

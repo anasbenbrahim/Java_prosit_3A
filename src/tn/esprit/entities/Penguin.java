@@ -1,5 +1,7 @@
 package tn.esprit.entities;
 
+import tn.esprit.enums.Food;
+
 public class Penguin extends Aquatic {
 
     private float swimmingDepth;
@@ -20,13 +22,15 @@ public class Penguin extends Aquatic {
         this.swimmingDepth = swimmingDepth;
     }
 
-    @Override
-    public void swim() {
-        System.out.println("A penguin is swimming");
-    }
+
 
     @Override
     public String toString() {
         return super.toString() + ", swimmingDepth:" + swimmingDepth;
+    }
+
+    @Override
+    public void eatMeat(Food var1) {
+
     }
 }
